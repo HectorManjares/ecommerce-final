@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academlo Store</title>
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="shortcut icon" href="./assets/images/favicon.png">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <style type="text/css" media="screen">
+    @import '/assets/css/desktop.css';
+  </style>
+</head>
+
+<body>
+  <div id="loader" class="loader">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="loader--img">
+      <title>Academlo Logo</title>
+      <g>
+        <g>
+          <path
+            d="M24.45,56.48,0,42.36V14.12L24.46,0,48.92,14.12V42.36ZM1.89,41.26l22.56,13L47,41.26v-26l-22.56-13-22.56,13Z">
+          </path>
+          <path
+            d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+          </path>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <header class="header" id="header">
+    <nav class="nav">
+      <div class="nav-menu-content">
+        <a href="#" class="nav--logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48">
+            <title>Academlo Logo</title>
+            <g>
+              <g>
+                <path
+                  d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+                </path>
+              </g>
+            </g>
+          </svg>
+        </a>
+        <ul class="nav-menu-ref">
+          <li class="nav-menu-ref-info"><a href="#" class="nav-menu">
+              STORE
+            </a>
+          </li>
+          <li class="nav-menu-ref-info"><a href="#" class="nav-menu1">
+              Home
+            </a>
+          </li>
+          <li class="nav-menu-ref-info"><a href="#Products" class="nav-menu2">
+              Products
+          </li>
+          </a>
+        </ul>
+      </div>
+      <div class="nav--menu">
+        <ul class="nav--list">
+          <li class="nav--item">
+            <a href="#" class="nav--link">
+              Home
+            </a>
+          </li>
+          <li class="nav--item">
+            <a href="#Products" class="nav--link">
+              Productos
+            </a>
+          </li>
+        </ul>
+        <div class="nav--close">
+          <i class='bx bx-x'></i>
+        </div>
+      </div>
+
+      <div class="nav--btns">
+        <i class='bx bx-moon change-theme' id="theme-button"></i>
+
+        <div class="nav--cart" id="cart-shop">
+          <i class='bx bx-shopping-bag'></i>
+          <span id="cart-counter" class="counter">0</span>
+        </div>
+
+        <div class="nav--toggle" id="nav-toggle">
+          <i class='bx bx-grid-alt'></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="cart--container hide" id="cart-container">
+    <div class="cart" id="cart">
+      <div class="nav--close" id="close-cart">
+        <i class='bx bx-x'></i>
+        <h3 class="cart-title">My Cart</h3>
+        <div class="cart-image">
+          <img src="./assets/images/empty-cart.png" alt="empty-cart">
+          <h4 class="cart-empty-title">Your cart is empty</h4>
+          <p>You can add items to your cart by clicking on the "+" button on the product page.</p>
+        </div>
+        <div class="cart-item-info" id="cart-item__info">
+          <div class="cart-imagen" id="cart-image">
+            <img src="./assets/images/Spider-Man1.png" alt="Green-Lantern">
+          </div>
+          <div class="cart-item-info_quantitative" id="item-info">
+            <div  class="cart-info_quantitative">
+              <h3 class="tipe-item" id="tipe">Common</h3>
+            <span class="info-stock" id="stock">Stock:9 |
+              <span class="price_item-cart" id="price_item">$5.00</span>
+            </span>
+            <span class="sub-price-item-stock" id="sub-price">Subtotal = $5.00</span>
+            </div>
+            <div class="cart-info-count">
+              <button class="counter-"><i class='bx bx-minus'></i></button>
+              <span class="counter-cart-intem">1units</span>
+              <button class="counter-"><i class='bx bx-plus' ></i></button>
+              <button class="item-delete"><i class='bx bx-trash' ></i></box-icon></button>
+            </div>
+          </div>
+        </div>
+        <div class="cart-info">
+          <p class="cart-items"><span id="cont">0</span> items</p>
+          <p class="cart-price" id="price">$0.00</p>
+        </div>
+        <div class="check">
+          <button class="check-button"><i class='bx bxs-check-shield'></i>Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="Information">
+      <div class="information-cont-all">
+        <div class="information-cont-img">
+          <div class="carrusel-img">
+            <img src="/assets/images/Adam-Warlock.png" alt="Adam-Warlock">
+            <img src="./assets/images/Guante.png" alt="Guante">
+            <img src="/assets/images/Thanos.png" alt="Thanos">
+            <img src="/assets/images/Fenix.png" alt="Fenix">
+          </div>
+        </div>
+        <div class="information-cont">
+          <h1>New Editions<br>
+            COLECTION 2022
+          </h1>
+          <p class="info-promo">
+          Latest arrival of the new Heroclix figures from the 2022 series, with powers from another world.</p> <span class="Precio">BOSSTER PACK $14.00</span>
+          <div class="img-span">
+            <img src="./assets/images/Booster.png" alt="Booster-img">
+          </div>
+          <p class="info-span">"Reveal the surprise inside"</p>
+          <div class="buttoms">
+            <a href="https://www.trollandtoad.com/heroclix/9073" target="_blank" class="button--small">Discover</a>
+            <button class="button--biger">ADD TO CARD</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="Products" id="Products">
+      <div class="produts-container">
+        <ul class="class-products_items">
+          <li class="class-products_show_all item1">
+            <h3 class="products_Title">Show All</h3>
+            <span class="products_items">show all products</span>
+          </li>
+          <li class="class-products_show_all item1">
+            <h3 class="products_Title">Common</h3>
+            <span class="products_items">3 products</span>
+          </li>
+          <li class="class-products_show_all">
+            <h3 class="products_Title">Rare</h3>
+            <span class="products_items">4 products</span>
+          </li>
+          <li class="class-products_show_all">
+            <h3 class="products_Title">Chase</h3>
+            <span class="products_items">4 products</span>
+          </li>
+        </ul>
+        <section id="products-list">
+          
+        </section>
+      </div>
+    </section>
+  </main>
+    <footer>
+      <div class="info-footer-conten">
+        <div class="info-footer-section">
+        <h3 class="info-footer-title">Our infomation</h3>
+        <p class="info-footer">Toluca-México</p>
+      </div>
+        <div class="info-footer-section">
+          <h3 class="info-footer">About Us</h3>
+          <ul class="info-footer">
+            <li><a href="#" class="info-footer">Support Center</a></li>
+            <li><a href="#" class="info-footer">Customer Support</a></li>
+            <li><a href="#" class="info-footer">About Us</a></li>
+            <li><a href="#" class="info-footer">Copy Right</a></li>
+          </ul>
+        </div>
+        <div class="info-footer-section">
+          <h3 class="info-footer">Products</h3>
+          <ul>
+            <li><a href="#Products" class="info-footer">Common</a></li>
+            <li><a href="#Products" class="info-footer">Rare</a></li>
+            <li><a href="#Products" class="info-footer">Chase</a></li>
+          </ul>
+        </div>
+        <div class="info-footer-section">
+          <h3 class="info-footer">About Us</h3>
+          <ul>
+            <a href="https://es-la.facebook.com/" target="_blank"><i class='bx bxl-facebook' id="bx-red"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class='bx bxl-twitter' id="bx-red"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram' id="bx-red"></i></a>
+            <a href="https://www.trollandtoad.com/heroclix/9073" target="_blank"><img
+              src="./assets/images/troll-and-toad.png" alt="troll-and-toad-logo"class='bxl-troll-and-toad' id="bx-red"></a>
+            </ul>
+          </div>
+        </div>
+      <div class="marca">
+          <span >© ACADEMLO. All rigths reserved</span>
+      </div>
+    </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

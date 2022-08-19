@@ -1,0 +1,221 @@
+@media screen and (min-width: 670px){
+
+
+      main{
+        max-width: 990px;
+        margin: 0 auto;
+      }
+
+      .nav{
+        max-width: 992px;
+        margin: 0 auto;
+      }
+      
+      .header{
+        z-index: 1;
+      }
+
+    .nav-menu1{
+        position: static;
+        font-size: 17px;
+        color:var(--first-color);
+        visibility: visible;
+      }
+      
+      .nav-menu2{
+        position: static;
+        font-size: 17px;
+        color: var(--title-color);
+        visibility: visible;
+      }
+      
+      .nav-menu2:hover{
+        color: var(--first-color);
+      }
+    
+      .nav--toggle{
+        position:absolute;
+        visibility: hidden;
+      }
+
+      .cart{
+        max-width: 400px;
+      }
+      
+      .cart--container {
+        z-index: 1;
+      }
+
+      .cart-item-info{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        background-color: var(--container-color);
+        width: 100%;
+        height: 25vh;
+        }
+
+        .Information{
+          width: 100%;
+          position: relative;
+        }
+      
+        .information-cont-all {
+          display: flex;
+          flex-direction: row-reverse;
+          align-items: center;
+          gap: 1.5rem;
+        }
+      
+        .information-cont-img{
+          width: 48%;
+          height: 100%;
+          background-color: var(--first-color);
+        }
+      
+        .information-cont-img>img{
+          margin-top: 3rem;
+          height: 400px;
+        }
+      
+        .information-cont{
+          display: grid;
+          margin-top: 3rem;
+        }
+    
+        .info-span{
+          text-align: start;
+          font-size: 18px;
+          text-transform: uppercase;
+          margin-top: 5%;
+          width: 47%;
+        }
+      
+        .img-span{
+            width: 38%;
+            height: 55%;
+            border: 1px solid var(--text-color);
+            background-color: var(--contain-img);
+            border-radius: 126px 0 100px 0;
+            position: absolute;
+            left: 29%;
+            top: 43%;
+        }
+
+        .Precio{
+        color: var(--first-color);
+        font-weight: bold;
+        }
+
+        .buttoms {
+          margin-top: 1.5rem;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          width: 342px;
+        }
+
+        .button--small {
+          width: 30%;
+          height: 50%;
+          padding: 1rem;
+          background-color: var(--card-color);
+          color: var(--text-color);
+          min-width: max-content;
+          margin-left: 14px;
+          align-self: flex-start;
+        }
+
+        .button--biger {
+          width: 38%;
+          height: 50%;
+          padding: 1rem;
+          background-color: var(--button-color);
+          border: none;
+          color: var(--text-color-light);
+          font-weight: bold;
+        }
+        
+        .class-products_items {
+          display: flex;
+          justify-content: space-evenly;
+          gap: 4rem;
+        }
+
+        .class-products_show_all {
+          text-align: center;
+        }
+
+        #products-list {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr;
+          justify-items: center;
+        }
+
+        .product-card {
+          width: 60%;
+          height: 92%;
+        }
+
+        .product-card_info {
+          padding: 1rem;
+        }
+
+        .btn-add {
+          left: 67%;
+        }
+        .info-footer-conten{
+          padding: 1rem;
+          display: flex;
+          justify-content: center;
+          text-align: start;
+          gap: 4rem;
+        }
+      
+ }      
+
+ @media screen and (min-width: 949px){
+  .img-span {
+    height: 60%;
+  }
+ }
+
+ @media screen and (min-width: 950px){
+
+  .button--small {
+    width: 30%;
+    height: 85%;
+    padding: 0.6rem;
+    align-self: center;
+    text-align: center;
+  }
+
+  .button--biger {
+    width: 38%;
+    height: 100%;
+   }
+
+   .buttoms {
+    display: flex;
+    flex-direction: row;
+    width: 336px;
+   }
+
+   .img-span {
+    width: 35%;
+    height: 57%;
+    left: 32%;
+    top: 41%;
+    }
+  }
+
+  @media screen and (min-width: 970px){
+    .img-span {
+      width: 35%;
+      height: 60%;
+      left: 32%;
+      top: 44%;
+    }
+
+  }
