@@ -1,55 +1,9 @@
-const items = [
-    {
-      id: 1,
-      name: 'Spider-Man',
-      price: 5.00,
-      image: 'assets/images/Spider-Man.png',
-      category: 'Common',
-      quantity: 20
-    },
-    {
-        id: 2,
-        name: 'Smigol',
-        price: 5.00,
-        image: 'assets/images/Smigol.png',
-        category: 'Common',
-        quantity: 25
-    },
-    {
-      id: 3,
-      name: 'Fenix',
-      price: 18.00,
-      image: 'assets/images/Fenix.png',
-      category: 'Rare',
-      quantity: 10
-    },
-    {
-        id: 4,
-        name: 'Sauron',
-        price: 14.00,
-        image: 'assets/images/Sauron.png',
-        category: 'Rare',
-        quantity: 8
-      },
-    {
-      id: 5,
-      name: 'Mr-Sinister',
-      price: 20.00,
-      image: 'assets/images/Mr-Sinister.png',
-      category: 'Chase',
-      quantity: 4
-    },
-    {
-        id: 6,
-        name: 'Deathstroke',
-        price: 25.00,
-        image: 'assets/images/Deathstroke.png',
-        category: 'Chase',
-        quantity: 2
-    }
-  ]
+import { items } from './data/db.js'
+import { productos } from './components/productos.js'
+import { cartFunctionality } from './components/carrito.js'
 
 document.addEventListener( "DOMContentLoaded", () =>{
+    productos()
     load()
     showProducts( items )
 })
@@ -159,34 +113,37 @@ function showProducts( products ){
         </div>
         ` 
 
+    <article class="cart__card">
+          <div class="cart__box">
+            <img src="assets/img/featured2.png" alt="Shirts" class="cart__img">
+          </div>
+  
+          <div class="cart__details">
+            <h3 class="cart__title">Shirts</h3>
+            <span class="cart__stock">Stock: 13 | <span class="cart__price">$24.00</span></span>
+            <span class="cart__subtotal">
+              Subtotal: $24.00
+            </span>
+  
+            <div class="cart__amount">
+              <div class="cart__amount-content">
+                <span class="cart__amount-box minus" data-id="2">
+                <i class="bx bx-minus"></i>
+                </span>
+  
+                <span class="cart__amount-number">1 units</span>
+  
+                <span class="cart__amount-box plus" data-id="2">
+                <i class="bx bx-plus"></i>
+                </span>
+              </div>
+  
+              <i class="bx bx-trash-alt cart__amount-trash" data-id="2"></i>
+            </div>
+          </div>
+        </article>
+*/
 
-/* AGREGAR AL CARRITO */
-
-function cartFunctionality( ){
-    const btns = document.querySelectorAll( ".btn-add" ) //NodeList
-    console.log( btns )
-    
-    //Arreglo con todos los botones
-    const cart = []
-    
-    btns.forEach( button =>{
-        button.addEventListener( "click", e => {
-            const id = parseInt(e.target.parentElement.id)
-            const selectedProduct = items.find( item => item.id === id)
-            cart.push( selectedProduct )
-            agregarContador()
-            console.log( cart )
-        })
-    })
-}
-
-
-let valor = 0
-function agregarContador(){
-    let contador = document.querySelector(".counter");
-    valor++;
-    contador.textContent = valor;
-}
 
 //CARRUSEL
 
