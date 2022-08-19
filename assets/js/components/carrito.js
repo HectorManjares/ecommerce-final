@@ -25,19 +25,25 @@ function addCart(id){
         window.localStorage.setItem('cart',JSON.stringify([]))
     }
     const cart = JSON.parse(window.localStorage.getItem('cart'))
-    cart.forEach((itm, i) => {
+    console.log(`Just read: ${cart.length}`);
+    for(let i in cart) {
         if(cart[i]['id'] === id){
             const local_product = findLocalItem(id)
-            console.log( local_product );
-            if(local_product.quantity-cart[i].quantity > 0){
-                cart[i].quantity += 1
+            //console.log( local_product );
+            const product_left = local_product.quantity - cart[i]['quantity']
+            if( product_left > 0 ){
+                //Linea del problema
+                //antes
+                //cart[i]['quantity'] += 1
+                cart[i]['quantity'] = cart[i]['quantity'] + 1
+                console.log(`before save: ${cart.length}`);
                 window.localStorage.setItem('cart',JSON.stringify(cart))
                 return true
             }else{
                 return false
             }
         }
-    })
+    }
     //TODO: controlar si el producto tiene stock inicial cero
     cart.push({
         id: id,
